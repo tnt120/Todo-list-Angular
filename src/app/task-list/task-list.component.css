@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 500px;
+    margin: auto;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+mat-form-field {
+    margin-right: 1.5rem;
+}
+
+.done {
+    text-decoration: line-through;
+}

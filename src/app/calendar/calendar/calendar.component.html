@@ -1,0 +1,6 @@
+<div>
+    <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+</div>
+<div class="navigation">
+    <button mat-button color="accent" class=""><a [routerLink]="['/tasks', {date:selectedDate}]">Tasks</a></button>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="todo-list">
+        <div class="input-group">
+            <mat-form-field>
+                <mat-label>Task</mat-label>
+                <input matInput #taskInput>
+            </mat-form-field>
+            <button mat-fab (click)="addTask(taskInput)">+</button>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let task of tasks; let i = index">
+                <mat-list-item>
+                        <span matListItemTitle [ngClass]="task.done ? 'done' : ''">{{ task.value }} </span>
+                        <span matListItemLine>
+                            {{ task.date }}
+                        </span>
+                        <span matListItemLine>
+                            <button mat-button (click)="toogleDoneTask(task)">{{ task.done ? 'Undo' : 'Done' }}</button>
+                            <button mat-button (click)="removeTask(task)">Delete</button>
+                        </span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </div>
+    <div class="navigation">
+        <button mat-button color="accent" class=""><a class="navigation" [routerLink]="['/']">Back</a></button>
+    </div>
+</div>

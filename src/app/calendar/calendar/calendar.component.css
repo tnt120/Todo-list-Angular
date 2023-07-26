@@ -1,0 +1,13 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+mat-calendar {
+    width: 500px;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
